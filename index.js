@@ -6,6 +6,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+import dotenv from "dotenv";
+dotenv.config();
+
 const OPENAI_KEY = process.env.OPENAI_KEY;
 
 app.post("/responder", async (req, res) => {
